@@ -1,0 +1,77 @@
+What You're Aiming For
+
+At this checkpoint, you are asked to write an algorithm that read a sentence, which ends with a point, character by character, and to determine:
+
+ 
+
+
+Instructions
+
+The length of the sentence (the number of characters).
+The number of words in the sentence (assuming that the words are separated by a single space).
+The number of vowels in the sentence.
+You have to keep in mind that: 
+
+Each character will be treated separately.
+The last character is the point.
+Use three variables as counters.
+
+
+
+
+
+
+ALGORITHM nb_length_in_sentence
+VAR
+    str : STRING : = "The best in the world.";
+    count : INTEGER = 0 ;
+BEGIN
+// Counts each character except space // 
+
+FOR (int i=0; i < str.length(); i++) DO 
+    IF (str[i] != '') THEN
+     count++; 
+  END_IF
+END_FOR
+     Write(count)
+END          
+
+
+
+ALGORITHM nb_word_in_sentence
+
+VAR 
+      str : STRING : ="The best in the world.";
+      count : INTEGER = 1;
+
+BEGIN      
+// The number of words in the sentence // 
+
+FOR i in str DO
+      IF i == " " THEN
+      count += 1; 
+      END_IF
+END_FOR 
+     Write(count)
+
+END
+
+ALGORITHM nb_vowels_in_sentence
+
+VAR
+    str : STRING : = "The best in the world."
+    vowels : CHAR : = ['a','e','i','o','u'] 
+    count : INTEGER = 0; 
+
+BEGIN
+
+// the number of vowels in the sentence // 
+
+FOR i in str DO 
+     IF i in vowels THEN
+          count +=1 
+     END_IF
+     num_vowels = count;
+END_FOR
+     Write(num_vowels); 
+END          
